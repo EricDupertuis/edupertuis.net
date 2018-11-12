@@ -19,3 +19,5 @@ fields:
 - type: boolean
   name: draft
   label: Draft
+pages:
+- content/posts/new-test-post.md
