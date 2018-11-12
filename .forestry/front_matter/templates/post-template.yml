@@ -1,0 +1,21 @@
+---
+label: Post Template
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  default: title
+  label: Title
+  name: title
+  description: The title of the post
+  config:
+    required: true
+- type: datetime
+  label: Date
+  name: date
+  description: Date of the post (avoid date in the future)
+  config:
+    display_utc: true
+- type: boolean
+  name: draft
+  label: Draft
