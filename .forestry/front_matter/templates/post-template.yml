@@ -20,5 +20,6 @@ fields:
   name: draft
   label: Draft
 pages:
+- content/posts/hello-sergio.md
 - content/about-page.md
 - content/posts/new-test-post.md
