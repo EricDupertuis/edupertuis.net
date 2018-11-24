@@ -12,3 +12,5 @@ This is a paragraph or so they say
 _This is not bold_
 
 [Here's google](https://google.com)
+
+![](/uploads/vr5zckp1fdx11.jpg)
