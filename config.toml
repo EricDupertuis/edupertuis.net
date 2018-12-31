@@ -1,4 +1,36 @@
-baseURL = "http://example.org/"
+baseurl = "/"
 languageCode = "en-us"
-title = "My New Hugo Site"
-theme = "main"
+title = "Edupertuis.net"
+theme = "classic"
+googleAnalytics = ""
+ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
+preserveTaxonomyNames = true
+enableEmoji = true
+footnotereturnlinkcontents = "↩"
+
+[permalinks]
+    post = "/post/:year/:month/:day/:slug/"
+[[menu.main]]
+    name = "About"
+    url = "/about"
+    weight = 1
+[[menu.main]]
+    name = "Projects"
+    url = "/projects"
+    weight = 1
+[[menu.main]]
+    name = "Contact"
+    url = "/contact"
+    weight = 3
+[[menu.feed]]
+    name = "Categories"
+    url = "/categories/"
+    weight = 2
+[[menu.feed]]
+    name = "RSS"
+    url = "/index.xml"
+    weight = 1
+
+[params]
+    description = "A simple, minimal blog for those who love text."
+    footer = "[Github](https://github.com/EricDupertuis) | [Twitter](https://twitter.com/dupertuiseric) | [Email](mailto:contact@edupertuis.net)"

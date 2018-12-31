@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Edupertuis.net</title>
+    <link>/post/</link>
+    <description>Recent content in Posts on Edupertuis.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 03 Feb 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2017 Global Game Jam</title>
+      <link>/post/2017/02/03/global-game-jam-2017/</link>
+      <pubDate>Fri, 03 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2017/02/03/global-game-jam-2017/</guid>
+      <description>Global Game Jam, I&amp;rsquo;m back (I know, I&amp;rsquo;m late into this party)
+Usually, when you have a great time at an event, you really want to go back there next year. That&amp;rsquo;s exactly what happened with the Global Game Jam. I went last year and I really had a blast. Last year I went to the swiss &amp;ldquo;Castle Jam&amp;rdquo; in La Tour-de-Peilz.
+This year, they had to go a bit bigger, as the number of paricipants went up quite a bit.</description>
+    </item>
+    
+    <item>
+      <title>On freelancing</title>
+      <link>/post/2016/08/06/on-freelancing/</link>
+      <pubDate>Sat, 06 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2016/08/06/on-freelancing/</guid>
+      <description>I&amp;rsquo;ve been freelancing on the side of my professional training for two years now, doing mainly web design and web development. I&amp;rsquo;ve decided to stop (at least the big projects) but I&amp;rsquo;ve learned a lot in two years. I&amp;rsquo;m pretty sure many people have encountered the problems that I faced way before me but I&amp;rsquo;m going the write about it anyway.
+Be a full-time freelancer, or don&amp;rsquo;t be Swinging between being a trainee (I&amp;rsquo;m learning my job part time in a company and part-time in a school) and a freelancer was one of the worst idea ever.</description>
+    </item>
+    
+    <item>
+      <title>The PHP hate</title>
+      <link>/post/2016/02/25/the-php-hate/</link>
+      <pubDate>Thu, 25 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2016/02/25/the-php-hate/</guid>
+      <description>If you take a look at some results on google or if you browse reddit on a regular basis, you&amp;rsquo;ve probably came across a blog post or a forum thread entitled Why PHP sucks or PHP is the worst programming language ever, Stop using PHP please etc&amp;hellip;.
+In fact, if you type PHP is bad in google , this is what you get :
+As Google says : It&amp;rsquo;s about 367&amp;rsquo;000&amp;rsquo;000 results but if you take a look at the results on the first page you get the idea, a lot of people hate PHP.</description>
+    </item>
+    
+    <item>
+      <title>One hell of a weekend - A Global Game Jam experience</title>
+      <link>/post/2016/02/02/global-game-jam-2016/</link>
+      <pubDate>Tue, 02 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2016/02/02/global-game-jam-2016/</guid>
+      <description>A first Global Game Jam So for me, this year started pretty well. I registered for the 2016 Global Game Jam.
+Just to put things in perspective : I never made a video game and neither did my team mates.
+We came in with a pretty heterogeneous team : Two graphic designers, a sys-admin, a biologist, a robotics engineer and a web-dev (me). None of us ever made game graphics, wrote game engines or even made music for a video game but we didn&amp;rsquo;t really care about that, we wanted to do this for the challenge.</description>
+    </item>
+    
+    <item>
+      <title>Playing with the Zopflipng compression library</title>
+      <link>/post/2016/01/12/playing-with-zopflipng-compression-library/</link>
+      <pubDate>Tue, 12 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2016/01/12/playing-with-zopflipng-compression-library/</guid>
+      <description>I saw This blog post on codinghorror.com about PNG images optimisation using Zopfli. And i decided to try it out and make some experiments with it. Codinghorror&amp;rsquo;s blog post also talks about PNGout and gzip but I&amp;rsquo;m not going to.
+What is Zopfli ? Zopfli is a data compression algorithm that encodes data into Deflate, gzip and zlib formats. It is based on an algorithm developed by Jyrki Alakuijala. A first reference implementation was released to the public in february 2013.</description>
+    </item>
+    
+    <item>
+      <title>Encryption of private data with EncFS</title>
+      <link>/post/2015/10/18/encryption-of-private-date-with-encfs/</link>
+      <pubDate>Sun, 18 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2015/10/18/encryption-of-private-date-with-encfs/</guid>
+      <description>What&amp;rsquo;s EncFS ? Let&amp;rsquo;s hear it from the mouth of Wikipedia
+EncFS is a Free (LGPL) FUSE-based cryptographic filesystem. It transparently encrypts files, using an arbitrary directory as storage for the encrypted files.  So what does EncFS do ? It simply takes a base directory that&amp;rsquo;s encrypted using a key and mounts a virtual filesystem on another folder.
+Why would you use it ? I personally use EncFS to protect some private data on my external hard drives.</description>
+    </item>
+    
+  </channel>
+</rss>

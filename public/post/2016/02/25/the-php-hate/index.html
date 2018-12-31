@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The PHP hate | Edupertuis.net</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css" integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js" integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js" integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body);
+        });
+    </script>
+
+<header>
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <nav>
+    <div class="container">
+      <ul>
+        
+        
+        <li class="pull-left ">
+          <a href="/">~/edupertuis.net</a>
+        </li>
+        
+        
+        <li class="pull-left ">
+          <a href="/about">~/about</a>
+        </li>
+        
+        
+        <li class="pull-left ">
+          <a href="/projects">~/projects</a>
+        </li>
+        
+        
+        <li class="pull-left ">
+          <a href="/contact">~/contact</a>
+        </li>
+        
+
+        
+        
+        <li class="pull-right">
+          <a href="/index.xml">~/rss</a>
+        </li>
+        
+        
+        <li class="pull-right">
+          <a href="/categories/">~/categories</a>
+        </li>
+        
+
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<div class="container">
+  </head>
+
+  <body>
+    <br/>
+
+<div class="article-meta">
+<h1><span class="title">The PHP hate</span></h1>
+<h3 class="date">Thursday, Feb 25, 2016</h2>
+<p class="terms">
+  
+  
+  Categories: <a href="/categories/programming">Programming</a> 
+  
+  
+  
+  Tags: <a href="/tags/programming">Programming</a> <a href="/tags/php">PHP</a> 
+  
+  
+</p>
+<hr/>
+</div>
+
+
+
+<main>
+
+
+<p>If you take a look at some results on google or if you browse reddit on a regular basis, you&rsquo;ve probably came across a blog post or a forum thread entitled <em>Why PHP sucks</em> or <em>PHP is the worst programming language ever</em>, <em>Stop using PHP please</em> etc&hellip;.</p>
+
+<p>In fact, if you type <em>PHP is bad</em> in google , this is what you get :</p>
+
+<p><img src="/images/phphate/1.png" alt="A screenshot of the menu" /></p>
+
+<p>As Google says : It&rsquo;s <em>about</em> 367&rsquo;000&rsquo;000 results but if you take a look at the results on the first page you get the idea, a lot of people hate PHP. Some hate it for valid reasons and others are just plain stupid elitists who rant on every other software than their own.</p>
+
+<h2 id="yes-php-used-to-be-bad">Yes, PHP used to be bad</h2>
+
+<p>Just to make things clear, I started tinkering with PHP with version 5.3 in 2010 I think, so I never worked with older versions of the language. (No I don&rsquo;t use PHP4 constructors) But, it is not difficult to find old PHP code on the internet, just take a look at the PEAR libraries.</p>
+
+<p>The fact is, PHP didn&rsquo;t really start as a full-blown programming language, It was just a set of tools named <em>Personal Home Page Tools</em> which have grown over time in a programming language. That explains the inconsistent naming and weird ordering of functions parameters. And I must admit there is some stuff I don&rsquo;t like about this language :</p>
+
+<ul>
+<li>The names of built-in functions are inconsistent (isset(), is_null())</li>
+<li>Functions arguments are inconsistent</li>
+<li>Case-insensitive functions but case-sensitive variables</li>
+<li>Other minor details</li>
+</ul>
+
+<p><code>&lt;rant&gt;</code> They say PHP is bad but Javascript is <a href="https://vimeo.com/111122950">filled with quirky stuff</a> as well and it still is one of the most trending language at the moment <code>&lt;/rant&gt;</code></p>
+
+<h2 id="php-is-popular">PHP is popular</h2>
+
+<p>Yes, this is something you can&rsquo;t deny, PHP is very popular on the web thanks to a lot of hosting companies. What makes the language so popular in my opinion is the combo : Shared hosting providers / Wordpress.</p>
+
+<p>Most hosting providers support the LAMP stack by default and you just have to drag and drop the files on the server and you&rsquo;re good to go. Some of theme even offer those one-click install of Wordpress and other CMS. This contribute to this high &ldquo;Market share&rdquo;.</p>
+
+<h2 id="legacy-projects">Legacy projects</h2>
+
+<p>This is one of the things that gives PHP a bad reputation : The old, crappy, poorly coded, bug ridden legacy projects. At my current job, I&rsquo;m in charge of an old project written in PHP that doesn&rsquo;t use any framework or libraries (completely built from scratch), has no correct routing (every page is a subfolder), and doesn&rsquo;t use a templating engine (a lot of <code>&lt;php echo $var ?&gt;</code> in the middle of the html).</p>
+
+<p>The tweet below pretty much sums it up.</p>
+
+<p><blockquote class="twitter-tweet" data-lang="fr"><p lang="en" dir="ltr">Current status : pulling my hair out and loading my shotgun&hellip;. <a href="https://twitter.com/hashtag/code?src=hash">#code</a> <a href="https://twitter.com/hashtag/codinghorror?src=hash">#codinghorror</a> <a href="https://twitter.com/hashtag/programming?src=hash">#programming</a> <a href="https://twitter.com/hashtag/horror?src=hash">#horror</a> <a href="https://twitter.com/hashtag/wtf?src=hash">#wtf</a> <a href="https://t.co/pYeZRslvRi">pic.twitter.com/pYeZRslvRi</a></p>&mdash; $this-getCthulhu(); (@dupertuiseric) <a href="https://twitter.com/dupertuiseric/status/683970594145198080">4 janvier 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p>Sadly, the internet is filled with such legacy crap and I can&rsquo;t blame anyone who worked on such project to develop nothing but pure hatred for PHP.</p>
+
+<h2 id="if-the-code-is-bad-there-s-a-reason">If the code is bad, there&rsquo;s a reason</h2>
+
+<p>Ok so this applies to all programming languages, If your code is bad, don&rsquo;t blame the language. If your C program overload the memory, <em>you</em> did something bad, not the language, not the C compiler. (or you clearly not have enough RAM and <em>you</em> are responsible)</p>
+
+<p>And that&rsquo;s what I want to say : There&rsquo;s too much bad PHP code out there (did I say wordpress ?) and too many projects filled with poorly designed codebase. Also, if you search for a PHP tutorial on google, you&rsquo;ll find hundreds of tutorials that doesn&rsquo;t teach you what the language can do and many of these will even give you perfect examples of what you shouldn&rsquo;t do.</p>
+
+<p>If you want to learn more about PHP, at first I would learn the basics (syntax, conditions and loops) and then move to a good tutorial such as <a href="http://www.phptherightway.com/">Php The Right Way</a></p>
+
+<h2 id="things-got-better">Things got better</h2>
+
+<p>Hell yeah things got better, coding in PHP on a modern project is awesome. I work on a regular basis on Symfony 2 projects at work and with Laravel at home as well and I can really say that it becomes a real pleasure to create web applications and solve problems with them. If we take a look at a Symfony 2 project, we find everything a modern application has such as an MVC pattern, a package manager, CLI utilities and much more.</p>
+
+<p>The latest versions really tried to make the language cleaner (go take a look at the improvements in PHP 7)</p>
+
+<h2 id="everything-sucks">Everything sucks</h2>
+
+<p>In the community of web development (and software development as well), everything sucks all the time. People say <em>ruby is slow it sucks</em>, <em>OOP is stupid, functional programming is better</em>, <em>Java sucks</em> etc&hellip; And don&rsquo;t get me wrong I love trolling Java users from time to time but still, great projects exists with Java (PhpStorm and other JetBrains IDE, Jenkins, elasticsearch among those I use) and if you managed to solve your problem with it, then great, don&rsquo;t lose your time with people telling you your language is bad.</p>
+
+<p>I use other languages, I&rsquo;m not a PHP integrist or crazy fanboy but if, by using PHP, I can create my websites, my web apps and other projects without too much hassle, then it&rsquo;s good for me.</p>
+
+</main>
+
+      <footer>
+        
+<script>
+(function() {
+  function center_el(tagName) {
+    var tags = document.getElementsByTagName(tagName), i, tag;
+    for (i = 0; i < tags.length; i++) {
+      tag = tags[i];
+      var parent = tag.parentElement;
+      
+      if (parent.childNodes.length === 1) {
+        
+        if (parent.nodeName === 'A') {
+          parent = parent.parentElement;
+          if (parent.childNodes.length != 1) continue;
+        }
+        if (parent.nodeName === 'P') parent.style.textAlign = 'center';
+      }
+    }
+  }
+  var tagNames = ['img', 'embed', 'object'];
+  for (var i = 0; i < tagNames.length; i++) {
+    center_el(tagNames[i]);
+  }
+})();
+</script>
+
+        
+        <hr/>
+        <a href="https://github.com/EricDupertuis">Github</a> | <a href="https://twitter.com/dupertuiseric">Twitter</a> | <a href="mailto:contact@edupertuis.net">Email</a>
+        
+      </footer>
+    </div>
+  </body>
+</html>
+

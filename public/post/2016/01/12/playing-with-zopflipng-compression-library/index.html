@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Playing with the Zopflipng compression library | Edupertuis.net</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css" integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js" integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js" integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body);
+        });
+    </script>
+
+<header>
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <nav>
+    <div class="container">
+      <ul>
+        
+        
+        <li class="pull-left ">
+          <a href="/">~/edupertuis.net</a>
+        </li>
+        
+        
+        <li class="pull-left ">
+          <a href="/about">~/about</a>
+        </li>
+        
+        
+        <li class="pull-left ">
+          <a href="/projects">~/projects</a>
+        </li>
+        
+        
+        <li class="pull-left ">
+          <a href="/contact">~/contact</a>
+        </li>
+        
+
+        
+        
+        <li class="pull-right">
+          <a href="/index.xml">~/rss</a>
+        </li>
+        
+        
+        <li class="pull-right">
+          <a href="/categories/">~/categories</a>
+        </li>
+        
+
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<div class="container">
+  </head>
+
+  <body>
+    <br/>
+
+<div class="article-meta">
+<h1><span class="title">Playing with the Zopflipng compression library</span></h1>
+<h3 class="date">Tuesday, Jan 12, 2016</h2>
+<p class="terms">
+  
+  
+  Categories: <a href="/categories/compression">Compression</a> 
+  
+  
+  
+  Tags: <a href="/tags/zopfli">Zopfli</a> <a href="/tags/linux">Linux</a> 
+  
+  
+</p>
+<hr/>
+</div>
+
+
+
+<main>
+
+
+<p>I saw <a href="http://blog.codinghorror.com/zopfli-optimization-literally-free-bandwidth/">This blog post</a> on <a href="http://codinghorror.com">codinghorror.com</a> about PNG images optimisation using Zopfli. And i decided to try it out and make some experiments with it. Codinghorror&rsquo;s blog post also talks about PNGout and gzip but I&rsquo;m not going to.</p>
+
+<h2 id="what-is-zopfli">What is Zopfli ?</h2>
+
+<p>Zopfli is a data compression algorithm that encodes data into Deflate, gzip and zlib formats. It is based on an algorithm developed by Jyrki Alakuijala. A <a href="https://github.com/google/zopfli">first reference implementation</a> was released to the public in february 2013.</p>
+
+<p>What really interests us here it the ZopfliPNG tool, implemented by Google in May 2013. This tool allow lossless compression for PNG images.</p>
+
+<p><img src="https://i.imgflip.com/mshs7.jpg" alt="Much Tech" /></p>
+
+<h2 id="installing-zopflipng">installing ZopfliPNG</h2>
+
+<p>first, you&rsquo;ll need to clone the <a href="https://github.com/google/zopfli">repository</a> and cd into the newly created folder</p>
+
+<pre><code>git clone https://github.com/google/zopfli.git
+cd zopfli
+</code></pre>
+
+<p>And then you simply have to build it (you may need to install build-essential if you&rsquo;re using ubuntu)</p>
+
+<pre><code>make zopflipng
+</code></pre>
+
+<p>Then, to use it just type</p>
+
+<pre><code>./zopflipng input.png output.png
+</code></pre>
+
+<p>Personally I like having the tool available system-wide so :</p>
+
+<pre><code>sudo mv zopflipng /usr/bin/
+</code></pre>
+
+<h2 id="playing-with-zopfli">Playing with zopfli</h2>
+
+<p>For my little test, I download a pack of icon from <a href="http://www.flaticon.com/">Flaticon.com</a> So I have now 50 small png images to compress. A little <code>du -h</code> gives us a size of 340K</p>
+
+<p>Now I&rsquo;ll just use a simple bash script to compress all of them and output them in another folder</p>
+
+<pre><code>#!/bin/bash
+for file in original/*.png
+do
+    zopflipng &quot;${file}&quot; compressed/$(basename &quot;${file}&quot;)
+done
+</code></pre>
+
+<p>Now if we take a look at the size difference.</p>
+
+<pre><code>340K    ./original
+312K    ./compressed
+</code></pre>
+
+<p>Hell yeah, we just saved 28k right there. It might not seem like a big deal but the compressed folder is 8.23% smaller (91.77% of the original size). If the images are 8% smaller on average, that&rsquo;s a lot of bandwidth that you just saved right there and the page load is going to be faster for the end user.</p>
+
+<p>And if we compare the two images :</p>
+
+<p><img src="/images/zopfli.png" alt="Zopfli Comparison" /></p>
+
+<p>We can see there&rsquo;s not much difference (like, none&hellip;, it&rsquo;s lossless). The only real difference is the file size. Let&rsquo;s just take a look at four icons picked at random</p>
+
+<table>
+<thead>
+<tr>
+<th align="center">File</th>
+<th align="center">Original</th>
+<th align="center">Compressed</th>
+<th align="center">Percentage of original</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">1</td>
+<td align="center">7.5K</td>
+<td align="center">6.8K</td>
+<td align="center">90.65%</td>
+</tr>
+
+<tr>
+<td align="center">2</td>
+<td align="center">4.0K</td>
+<td align="center">3.5K</td>
+<td align="center">87.5%</td>
+</tr>
+
+<tr>
+<td align="center">3</td>
+<td align="center">2.4K</td>
+<td align="center">2.1K</td>
+<td align="center">87.5%</td>
+</tr>
+
+<tr>
+<td align="center">4</td>
+<td align="center">5.9K</td>
+<td align="center">5.4K</td>
+<td align="center">91.75</td>
+</tr>
+
+<tr>
+<td align="center">&hellip;</td>
+<td align="center">&hellip;</td>
+<td align="center">&hellip;</td>
+<td align="center">&hellip;</td>
+</tr>
+</tbody>
+</table>
+
+<p>Of course the compression depends on the image&rsquo;s complexity but we get images that are up to 13% smaller.</p>
+
+<p>The downside is that it took quite a lot of time and power. Compressing the images took my computer 293 seconds using one core at 100% (zopfli doesn&rsquo;t use multiple cores). Now keep in mind that i&rsquo;m running this on a laptop(2.4 Ghz Intel i3-3110M) and I used a single instance of Zopfli, I could have used multiple instances and compress multiple images in parralel (but i didn&rsquo;t want to write such a script because I&rsquo;m lazy).</p>
+
+<h2 id="compressing-bigger-images">Compressing bigger images</h2>
+
+<p>So for another test i tried to compress this 2836K image found on <a href="https://dribbble.com/shots/631004-Wallpaper-Retina/attachments/53013">Dribbble.com</a> by <a href="https://twitter.com/maxvoltar">Tim Van Damme</a></p>
+
+<p>Again :</p>
+
+<pre><code>zopflipng wallpaper.png compressed.png
+</code></pre>
+
+<p>And now we wait, go grab a cup of coffee and a cookie because this is gonna take some time to compress. It took me 4 minutes and 36 seconds (276 seconds).</p>
+
+<table>
+<thead>
+<tr>
+<th align="center">Original</th>
+<th align="center">Compressed</th>
+<th align="center">Percentage of original</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">2836K</td>
+<td align="center">2557K</td>
+<td align="center">90.159%</td>
+</tr>
+</tbody>
+</table>
+
+<p>So we won almost 10%, that&rsquo;s neat.</p>
+
+<h2 id="so-what-now">So what now ?</h2>
+
+<p><img src="https://i.imgflip.com/x82yl.jpg" alt="Compress all the images" /></p>
+
+<p>So we can see that Zopfli is a pretty great tool to compress PNG images. It takes quite a lot of CPU time but it really is just : compress once, deliver indefinitely. If you have to deliver a lot of images and icons to hundreds, thousands or millions of users, just think about the bandwith that you&rsquo;re saving.
+Just imagine you&rsquo;re serving those 50 png icons every month to 300&rsquo;000 <em>unique</em> users (so I don&rsquo;t bother about cache and stuff).</p>
+
+<table>
+<thead>
+<tr>
+<th align="center">Icons original</th>
+<th align="center">Icons compressed</th>
+<th align="center">users</th>
+<th align="center">Total original</th>
+<th align="center">Total compressed</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">340K</td>
+<td align="center">312k</td>
+<td align="center">300&rsquo;000</td>
+<td align="center">102MB</td>
+<td align="center">93,6MB</td>
+</tr>
+</tbody>
+</table>
+
+<p>So ok you just save 8.4MB of bandwith every month but here we are just talking about a pack of 50 icons. Maybe you have a lot more icons to distribute, profile pictures, banners and all kinds of images. And if you can reduce the size of the images you&rsquo;re also reducing the total size of a page, and if you make the web faster, you make the web better. (love that little catch phrase)</p>
+
+<p>Have fun compressing stuff.</p>
+
+</main>
+
+      <footer>
+        
+<script>
+(function() {
+  function center_el(tagName) {
+    var tags = document.getElementsByTagName(tagName), i, tag;
+    for (i = 0; i < tags.length; i++) {
+      tag = tags[i];
+      var parent = tag.parentElement;
+      
+      if (parent.childNodes.length === 1) {
+        
+        if (parent.nodeName === 'A') {
+          parent = parent.parentElement;
+          if (parent.childNodes.length != 1) continue;
+        }
+        if (parent.nodeName === 'P') parent.style.textAlign = 'center';
+      }
+    }
+  }
+  var tagNames = ['img', 'embed', 'object'];
+  for (var i = 0; i < tagNames.length; i++) {
+    center_el(tagNames[i]);
+  }
+})();
+</script>
+
+        
+        <hr/>
+        <a href="https://github.com/EricDupertuis">Github</a> | <a href="https://twitter.com/dupertuiseric">Twitter</a> | <a href="mailto:contact@edupertuis.net">Email</a>
+        
+      </footer>
+    </div>
+  </body>
+</html>
+

@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/thorgilson
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://edupertuis.net
+  * I am thorgilson (https://keybase.io/thorgilson) on keybase.
+  * I have a public key with fingerprint 1F03 2F5B 8520 A842 7A4F  725D 0022 C3CA 2A7E 30C7
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "010169410fb4fc1123f49695cc02e0543001ef6c0174d36f0d47bd6ae7552c3c7abe0a",
+            "fingerprint": "1f032f5b8520a8427a4f725d0022c3ca2a7e30c7",
+            "host": "keybase.io",
+            "key_id": "0022c3ca2a7e30c7",
+            "kid": "010169410fb4fc1123f49695cc02e0543001ef6c0174d36f0d47bd6ae7552c3c7abe0a",
+            "uid": "7684b6d430d2da4050a094d206b6e719",
+            "username": "thorgilson"
+        },
+        "service": {
+            "hostname": "edupertuis.net",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1475738067,
+    "expire_in": 157680000,
+    "prev": "6ffff0ba782d1a891b5976136e6762cad7985ed2fc64e674ed6e8a954788af2b",
+    "seqno": 5,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.58
+Comment: https://keybase.io/crypto
+
+yMIrAnicrVJbSBVRFL23MsqypKD6qJ+RgkLjzLkz58xcKiEC8fFR9sTSy5k5Z7yD
+NnOdmXvL3mEoCPmij5TIPkypzMiSIspKK4MsiD4qblSEJFhED6UHhZ0x++q3/XM4
+e6+19tqbfSdtaiA1eGythOjL523BB7db4oGtY9+f7BU0m1YK4b1CGZt4WDllrhcp
+M6kQFoAIRKRKIjA0ydBFEYYMSUWqrOsAMiBLIQBEZiAdiFiiIWQAKmGNIsKwLEM9
+pGOiMUCETMEwrVLmxBzT8risaIAQNGRNkSEgigQxkQwMZQoA9FkEEsxCQMecGLVd
+n8HNacRlK02b5/gn8sfev/j/7Ds+IYeRImmIchqFlEhABgSoEoUAaYhhUfWBLnMs
+spNxtBe1nVKz3LUtYX+mwPMJU2f+av1ZJjGMxmPM8eKmu9JiHufHHNuzdbuc16Ke
+Fwv7VK8y5mN3MS0yqRLRTIvyVXJCgjmuyVuERY7UPdOXFSUs45ACEM4U2O6Y6bCI
+6SNkPgDg4bdhCS6JDB5AI1iBVCSKKmqyipEYQgxhBHVCsarIjEJDRxJPSYwiphBV
+lrCiEANqgj9XhWULYZnbJKVc0jVLLeLFHSbs77u1Y1ogmBqYnjLFP7FA6sz0v4cX
+XTAjcBkOPs0101Nqvj4aPGLBnI9NP2F20xrv/dL8WHK49wprKB6rHEnW1UamB5M3
+Er+MkerUkReHtuWkHC7rnFXRsT07bfWmjaZWlHO849t4T1mysNg9c2348puTPY+f
+NYzfv9rzq2NFyvyhIediVfJz9cFzqzLdjLzF6d3RPVvXRUuih99+KTorL1Ltd41D
+rV7i+rzcgvyaT3kv8/ZdKCk80Ne1pH3ZiQ+rtmzY3BJpbw4effj6/GBuy1hV76g8
+t3H9goFLWVkHp/TuqFcWPnr8Q71Ss/hMrZ3R39c8dfm9n4MFn7sqZreVtA73nxqd
+s23m7u4BJevuq4LTN29lzRsvqKqvW9TQ+Rtw/Uiu
+=cZmC
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/thorgilson
+
+==================================================================
